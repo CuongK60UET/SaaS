@@ -1,0 +1,129 @@
+body{
+    font-size: 13px;
+    color: #000000;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+#header{
+    height: 80px;
+    background: #fbe54e;
+}
+.nav{
+    padding-top: 20px;
+    /*margin: 0 120px 0 0px;*/
+}
+.nav-pills li {
+    float: right;
+    margin-left: 20px;
+    margin-right: 20px;
+    font-size: 16px;
+}
+#header>.logo{
+    float: left;
+}
+#main >.container {
+    padding-top: 20px;
+    background: #fff0f0;
+}
+.ds_sanpham>a>li{
+    line-height: 30px;
+    text-align: left;
+    font-size: 15px;
+    border: 1px solid #9acfea;
+    margin-top: 3px;
+    padding-left: 20px;
+}
+.ds_sanpham>a>li:hover{
+    color: #00A000;
+    background: #9acfea;
+}
+.ds_sanpham>a:hover{
+    text-decoration: none;
+}
+.ds_sanpham{
+    margin-left: -25px;
+    list-style: none;
+    padding-left: 30px;
+}
+.col-md-3>h5{
+    line-height: 35px;
+    padding-left: 30px;
+    background: #9d9d9d;
+    border-radius: 3px;
+    font-size: 16px;
+}
+.spnoibat{
+    line-height: 35px;
+    padding-left: 30px;
+    background: #b9def0;
+    border-radius: 3px;
+    font-size: 16px;
+}
+.left_main{
+    padding-bottom: 10px;
+    border-top :1px solid #9acfea ;
+    border-right : 1px solid #9acfea ;
+    border-bottom : 1px solid #9acfea ;
+    border-radius: 6px;
+}
+ul {
+    list-style: none;
+}
+#sanpham{
+    padding: 10px;
+    border: 1px solid #0e84b5;
+    border-radius: 3px;
+    margin-right: 15px;
+}
+.text_info{
+    padding-top: 10px;
+    display: block;
+}
+.text_info>a{
+    display: block;
+    padding-top: 5px ;
+    padding-bottom: 10px;
+}
+.text_info>p{
+    width: 340px;
+}
+#sanpham>li{
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+#footer{
+    text-align: center;
+    margin-top: 20px;
+    background: #c1e2b3;
+}
+#sanpham>button{
+    padding-left: 20px;
+
+}
+#header .container #user{
+    position: relative;
+    display: block;
+    padding: 10px 15px;
+}
+#header .container #user p{
+    margin: 0;
+    float: right;
+    margin-top: 2px;
+}
+#header .container .user a{
+    cursor: pointer;
+}
+#header .container .user ul{
+    padding-left: 5px;
+    float: right;
+}
+.ds_sanpham>.active {
+    font-weight: 500;
+    color: black;
+}
+.media-body{
+
+
+    border:  2px solid #0e84b5;
+    padding: 10px;
+    border-radius: 3px ;
+}

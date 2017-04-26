@@ -1,0 +1,50 @@
+.slide{
+    height: 250px;
+    padding: 15px;
+}
+.img-slide{
+    height: 250px;
+    width: 100%;
+    position: relative;
+    border-radius: 3px;
+    border: 1px solid #84ffc7;
+}
+.slide .img{
+    height: 100%;
+    width: 100%;
+}
+.img-slide span{
+    position: absolute;
+    top: 40%;
+    display: block;
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+}
+#next{
+    right: 2px;
+}
+#prev{
+    left: 2px;
+}
+.icon_bot {
+    position: absolute;
+    text-decoration: none;
+    bottom: -10px;
+    left: 37%;
+    padding-left: 0px;
+    cursor: pointer;
+}
+.icon_bot li{
+    display: inline;
+
+}
+.img_icon_bot:hover{
+    background: url("../img/img_bot_hover.png")
+}
+.img_icon_bot{
+    background: url("../img/icon_bot.png");
+}
+.active_icon{
+    background: url("../img/icon_bot_active.png");
+}

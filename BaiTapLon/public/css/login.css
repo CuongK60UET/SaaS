@@ -1,0 +1,31 @@
+body{
+    color: #000000;
+}
+#main .login-container{
+    margin-top: 30px;
+    width: 700px;
+}
+#main .container .form-container{
+    padding: 10px;
+    background: #9acfff;
+    margin: 10px auto 20px;
+}
+ #form-title {
+    border-top-left-radius: 2px;
+    border-top-right-radius: 2px;
+    border-bottom: 1px solid #efefef;
+    text-align: center;
+    font-size: 16px;
+    padding: 8px 15px;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+.checkbox{
+    margin-left: 20px;
+}
+.login input{
+    width: 100%;
+}
+.form-container .form{
+    margin: 40px;
+}
