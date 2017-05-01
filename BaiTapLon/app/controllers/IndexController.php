@@ -62,7 +62,9 @@ class IndexController extends ControllerBase
         if ($this->getAuth()) {
             $this->view->users = $this->getAuth()['HovaTen'];
             $cart = $this->session->get('cart');
-            $carts = $this->session->get('carts');
+//            $carts = $this->session->get('carts');
+//            $cart = array_merge($cart, $carts);
+//            $this->session->set('cart', $cart);
             $this->view->run2 = false;
             if (count($cart)) {
                 $Pay = 0;
@@ -77,8 +79,6 @@ class IndexController extends ControllerBase
             }
             if (!count($cart)) {
                 $this->view->Payall = 0;
-//                $this->view->run2 = true;
-//                $this->view->run1 = false;
             }
 
 
@@ -256,7 +256,7 @@ class IndexController extends ControllerBase
             }
         }
         return $this->response->setJsonContent(array(
-           'status' => '1',
+            'status' => '1',
             'message' => 'Bạn cần phải đăng nhập trước khi thanh toán !!',
         ));
     }
@@ -303,7 +303,7 @@ class IndexController extends ControllerBase
         $products = array();
         foreach ($order_details as $key => $a){
             $product = Product::findFirst(array(
-               "MaQuanAo = :a:",
+                "MaQuanAo = :a:",
                 "bind" => array(
                     "a" => $a['product_id']
                 )

@@ -38,7 +38,7 @@ class SessionController extends ControllerBase{
                     $products[] = $product;
                 }
 
-                $this->session->set('carts', $products);
+                $this->session->set('cart', $products);
                 $this->setAuth($user);
                 return $this->dispatcher->forward(array(
                         'controller' => 'index',
