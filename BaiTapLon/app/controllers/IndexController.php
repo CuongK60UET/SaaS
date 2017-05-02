@@ -61,23 +61,27 @@ class IndexController extends ControllerBase
     {
         if ($this->getAuth()) {
             $this->view->users = $this->getAuth()['HovaTen'];
-            $cart = $this->session->get('cart');
-//            $carts = $this->session->get('carts');
-//            $cart = array_merge($cart, $carts);
-//            $this->session->set('cart', $cart);
+            $cart = array_merge($this->session->get('cart'), $this->session->get('carts'));
             $this->view->run2 = false;
             if (count($cart)) {
                 $Pay = 0;
+                for($i = 0; $i<count($cart)-1; $i++){
+                    for($j = $i+1; $j< count($cart); $j++){
+                        if ($cart[$j]['MaQuanAo'] == $cart[$i]['MaQuanAo']){
+                            $cart[$i]['soluong'] += $cart[$j]['soluong'];
+                            unset($cart[$j]); array_merge($cart);
+                        }
+                    }
+                }
+//                print_r($cart);die;
                 $this->view->run1 = true;
-
-                $cart = $this->session->get('cart');
                 foreach ($cart as $prodct) {
                     $Pay += $prodct['Gia'] * $prodct['soluong'];
                 }
                 $this->view->cart = $cart;
                 $this->view->Payall = $Pay;
             }
-            if (!count($cart)) {
+            else if (!count($cart)) {
                 $this->view->Payall = 0;
             }
 
@@ -89,7 +93,7 @@ class IndexController extends ControllerBase
             if (count($cart)) {
                 $Pay = 0;
                 $this->view->run1 = true;
-                $cart = $this->session->get('cart');
+//                $cart = $this->session->get('cart');
                 foreach ($cart as $prodct) {
                     $Pay += $prodct['Gia'] * $prodct['soluong'];
                 }
@@ -135,7 +139,7 @@ class IndexController extends ControllerBase
                     }
                 }
             }
-
+            $this->session->remove('cart');
             $this->session->set('cart', $cart);
             return $this->response->setJsonContent(['status' => '1', 'message' => 'Bạn đã thêm vào giỏ hàng thành công']);
         }
@@ -237,7 +241,8 @@ class IndexController extends ControllerBase
                     $product->soluong = $products['soluong'];
                     $product->save();
                 }
-                $this->session->set('cart', $a = array());
+                $this->session->remove('cart');
+                $this->session->remove('carts');
                 $cart_del = Cart::find(array(
                         "userID = :userID:",
                         'bind' => array(

@@ -24,14 +24,13 @@
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="IndexController.php" pinned="false" current-in-tab="false">
+      <file leaf-file-name="IndexController.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/controllers/IndexController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="17">
-              <caret line="55" column="9" lean-forward="true" selection-start-line="55" selection-start-column="9" selection-end-line="55" selection-end-column="9" />
+            <state relative-caret-position="993">
+              <caret line="263" column="28" lean-forward="true" selection-start-line="263" selection-start-column="28" selection-end-line="263" selection-end-column="28" />
               <folding>
                 <element signature="n#productTypeAction#0;n#IndexController#0;n#!!top" expanded="false" />
-                <element signature="n#invoiceAction#0;n#IndexController#0;n#!!top" expanded="false" />
                 <element signature="n#ordersAction#0;n#IndexController#0;n#!!top" expanded="false" />
                 <element signature="n#order_detailsAction#0;n#IndexController#0;n#!!top" expanded="false" />
                 <element signature="n#saveCartAction#0;n#IndexController#0;n#!!top" expanded="false" />
@@ -50,14 +49,14 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="SessionController.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="SessionController.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/controllers/SessionController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="327">
-              <caret line="40" column="41" lean-forward="false" selection-start-line="40" selection-start-column="41" selection-end-line="40" selection-end-column="41" />
+            <state relative-caret-position="412">
+              <caret line="40" column="42" lean-forward="false" selection-start-line="40" selection-start-column="42" selection-end-line="40" selection-end-column="42" />
               <folding>
-                <element signature="e#1863#1949#1#PHP" expanded="false" />
-                <element signature="e#2062#2149#1#PHP" expanded="false" />
+                <element signature="e#1864#1950#1#PHP" expanded="false" />
+                <element signature="e#2063#2150#1#PHP" expanded="false" />
               </folding>
             </state>
           </provider>
@@ -150,8 +149,8 @@
         <option value="$PROJECT_DIR$/app/views/index/cart.volt" />
         <option value="$PROJECT_DIR$/app/models/Orders.php" />
         <option value="$PROJECT_DIR$/app/controllers/ControllerBase.php" />
-        <option value="$PROJECT_DIR$/app/controllers/IndexController.php" />
         <option value="$PROJECT_DIR$/app/controllers/SessionController.php" />
+        <option value="$PROJECT_DIR$/app/controllers/IndexController.php" />
       </list>
     </option>
   </component>
@@ -413,12 +412,12 @@
       <workItem from="1493381765924" duration="10324000" />
       <workItem from="1493422833188" duration="4975000" />
       <workItem from="1493550934662" duration="1890000" />
-      <workItem from="1493596843849" duration="1117000" />
+      <workItem from="1493596843849" duration="6862000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="246408000" />
+    <option name="totallyTimeSpent" value="252153000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="0" width="1378" height="735" extended-state="0" />
@@ -739,27 +738,26 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/controllers/IndexController.php">
+    <entry file="file://$PROJECT_DIR$/app/controllers/SessionController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="55" column="9" lean-forward="true" selection-start-line="55" selection-start-column="9" selection-end-line="55" selection-end-column="9" />
+        <state relative-caret-position="412">
+          <caret line="40" column="42" lean-forward="false" selection-start-line="40" selection-start-column="42" selection-end-line="40" selection-end-column="42" />
           <folding>
-            <element signature="n#productTypeAction#0;n#IndexController#0;n#!!top" expanded="false" />
-            <element signature="n#invoiceAction#0;n#IndexController#0;n#!!top" expanded="false" />
-            <element signature="n#ordersAction#0;n#IndexController#0;n#!!top" expanded="false" />
-            <element signature="n#order_detailsAction#0;n#IndexController#0;n#!!top" expanded="false" />
-            <element signature="n#saveCartAction#0;n#IndexController#0;n#!!top" expanded="false" />
+            <element signature="e#1864#1950#1#PHP" expanded="false" />
+            <element signature="e#2063#2150#1#PHP" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/controllers/SessionController.php">
+    <entry file="file://$PROJECT_DIR$/app/controllers/IndexController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="327">
-          <caret line="40" column="41" lean-forward="false" selection-start-line="40" selection-start-column="41" selection-end-line="40" selection-end-column="41" />
+        <state relative-caret-position="993">
+          <caret line="263" column="28" lean-forward="true" selection-start-line="263" selection-start-column="28" selection-end-line="263" selection-end-column="28" />
           <folding>
-            <element signature="e#1863#1949#1#PHP" expanded="false" />
-            <element signature="e#2062#2149#1#PHP" expanded="false" />
+            <element signature="n#productTypeAction#0;n#IndexController#0;n#!!top" expanded="false" />
+            <element signature="n#ordersAction#0;n#IndexController#0;n#!!top" expanded="false" />
+            <element signature="n#order_detailsAction#0;n#IndexController#0;n#!!top" expanded="false" />
+            <element signature="n#saveCartAction#0;n#IndexController#0;n#!!top" expanded="false" />
           </folding>
         </state>
       </provider>
