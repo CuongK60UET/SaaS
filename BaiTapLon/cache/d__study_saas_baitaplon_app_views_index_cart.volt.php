@@ -19,13 +19,13 @@
                             <ul class="dropdown-menu">
                                 <li class=""><a href="#">Thông tin người dùng</a></li>
                                 <li class="divider"></li>
-                                <li class=""><a href="../index/orders">Lịch sử thanh toán</a></li>
+                                <li class=""><a href="../orders/orders">Lịch sử thanh toán</a></li>
                                 <li class="divider"></li>
                                 <li class=""><a href="../session/logout">Đăng xuất</a></li>
                             </ul>
                         </li>
                     <?php } ?>
-                    <li role="presentation"><a href="../index/signup">Đăng kí </a></li>
+                    <li role="presentation"><a href="../session/signup">Đăng kí </a></li>
                     <li role="presentation"><a href="/index">Trang chủ</a></li>
 
                 </ul>

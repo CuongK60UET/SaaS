@@ -17,7 +17,7 @@
                             <ul class="dropdown-menu">
                                 <li class=""><a href="#">Thông tin người dùng</a></li>
                                 <li class="divider"></li>
-                                <li class=""><a href="../index/orders">Lịch sử thanh toán</a></li>
+                                <li class=""><a href="../orders/orders">Lịch sử thanh toán</a></li>
                                 <li class="divider"></li>
                                 <li class=""><a href="../session/logout">Đăng xuất</a></li>
                             </ul>
@@ -28,7 +28,7 @@
 
                     <?php } ?>
                     <li role="presentation"><a href="/index/cart">Đi tới giỏ hàng</a></li>
-                    <li role="presentation"><a href="">Đăng kí</a></li>
+                    <li role="presentation"><a href="../session/signup">Đăng kí</a></li>
                     <li role="presentation"><a href="../index/index">Trang chủ</a></li>
                 </ul>
             </div>

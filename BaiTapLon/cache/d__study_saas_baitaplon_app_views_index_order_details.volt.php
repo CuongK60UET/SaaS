@@ -9,7 +9,7 @@
                     <li role="presentation" class="user dropdown">
                         <a id="user" class="dropdown-toggle" data-toggle="dropdown">
                             <img src="../img/contacts_icon21.png" width="22">
-                            <p>{{ users['HovaTen'] }}</p>
+                            <p><?= $users['HovaTen'] ?></p>
                         </a>
                         <ul class="dropdown-menu">
                             <li class=""><a href="#">Thông tin người dùng</a></li>
@@ -33,18 +33,18 @@
             <div class="col-md-6" style="text-align: center">
                 <h5>Thông tin khác hàng</h5>
                 <div>
-                    <p>Họ và tên : {{ users['HovaTen'] }}</p>
-                    <p>Số điện thoại: {{ users['sodienthoai'] }}</p>
-                    <p> Địa chỉ: {{ users['DiaChi'] }}</p>
+                    <p>Họ và tên : <?= $users['HovaTen'] ?></p>
+                    <p>Số điện thoại: <?= $users['sodienthoai'] ?></p>
+                    <p> Địa chỉ: <?= $users['DiaChi'] ?></p>
                 </div>
 
             </div>
             <div class="col-md-6" style="text-align: center">
                 <h5>Thông tin hoá đơn</h5>
                 <div>
-                    <p>Tổng số tiền thanh toán {{ order['payments'] }} đồng</p>
-                    <p>Thời gian : {{ order['order_time'] }} </p>
-                    <p>Ngày :{{ order['order_date'] }}</p>
+                    <p>Tổng số tiền thanh toán <?= $order['payments'] ?> đồng</p>
+                    <p>Thời gian : <?= $order['order_time'] ?> </p>
+                    <p>Ngày :<?= $order['order_date'] ?></p>
                 </div>
             </div>
         </div>
@@ -62,21 +62,21 @@
                 </tr>
                 </thead>
                 <tbody>
-                {% for item in products %}
+                <?php foreach ($products as $item) { ?>
                     <tr>
-                        <td>{{ item['stt'] }}</td>
-                        <td>{{ item['TenQuanao'] }}</td>
-                        <td>{{ item['Gia'] }} Đồng</td>
-                        <td>{{ item['soluong'] }}</td>
-                        <td>{{ item['pay']}} đồng</td>
+                        <td><?= $item['stt'] ?></td>
+                        <td><?= $item['TenQuanao'] ?></td>
+                        <td><?= $item['Gia'] ?> Đồng</td>
+                        <td><?= $item['soluong'] ?></td>
+                        <td><?= $item['pay'] ?> đồng</td>
                     </tr>
-                {% endfor %}
+                <?php } ?>
                 <tr>
                     <td></td>
                     <td></td>
                     <td></td>
                     <td><h5><b>Tổng tiền</b></h5></td>
-                    <td><h5><b>{{ order['payments'] }} Đồng</b></h5></td>
+                    <td><h5><b><?= $order['payments'] ?> Đồng</b></h5></td>
                 </tr>
                 </tbody>
             </table>

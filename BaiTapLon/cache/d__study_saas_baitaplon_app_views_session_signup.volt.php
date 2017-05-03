@@ -8,7 +8,7 @@
             <div class="col-md-9">
                 <ul class="nav nav-pills">
                     <li role="presentation" class="active"><a href="../session/index">Đăng nhập</a></li>
-                    {#<li role="presentation"><a href="">Đăng kí tài khoản</a></li>#}
+                    
                     <li role="presentation"><a href="../index">Trang chủ</a></li>
                 </ul>
             </div>

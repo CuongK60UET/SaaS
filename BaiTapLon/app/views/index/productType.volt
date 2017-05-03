@@ -26,7 +26,7 @@
                         <li role="presentation" class="active"><a href="/session/login">Đăng nhập</a></li>
                     {% endif %}
 
-                    <li role="presentation"><a href="">Đăng kí tài khoản</a></li>
+                    <li role="presentation"><a href="../session/signup">Đăng kí tài khoản</a></li>
                     <li role="presentation"><a href="/index/index">Trang chủ</a></li>
                 </ul>
             </div>

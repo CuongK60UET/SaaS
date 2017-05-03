@@ -19,7 +19,7 @@
                             <li class=""><a href="../session/logout">Đăng xuất</a></li>
                         </ul>
                     </li>
-                    <li role="presentation"><a href="">Đăng kí tài khoản</a></li>
+                    <li role="presentation"><a href="../session/signup">Đăng kí </a></li>
                     <li role="presentation"><a href="../index">Trang chủ</a></li>
                 </ul>
             </div>
@@ -38,7 +38,7 @@
                             <td>
                                 <div class="media" style="width: 60%; margin-left: 20%; margin-bottom: 20px">
                                     <div class="media-body">
-                                        <a href="../index/order_details?id={{ item['id'] }}"  >
+                                        <a href="../orders/order_details?id={{ item['id'] }}"  >
                                             <h4 >
                                                 Hoá đơn số {{ k+1 }}
                                             </h4>

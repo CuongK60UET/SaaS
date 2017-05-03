@@ -52,7 +52,7 @@ $('.pay').click(function () {
         pay = $(this).attr('pay');
         $.ajax({
             type: "POST",
-            url: "../index/invoice",
+            url: "../orders/invoice",
             data: {Pay: pay},
             dataType: 'json',
             success: function (data) {

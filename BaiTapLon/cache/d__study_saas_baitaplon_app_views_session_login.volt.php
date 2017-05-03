@@ -1,3 +1,4 @@
+
 <div id="header">
     <div class="container">
         <div class="row">
@@ -7,7 +8,7 @@
             </div>
             <div class="col-md-9">
                 <ul class="nav nav-pills">
-                    {#<li role="presentation" class="active"><a href="/login.php">Đăng nhập</a></li>#}
+                    
                     <li role="presentation"><a href="">Đăng kí tài khoản</a></li>
                     <li role="presentation"><a href="../index">Trang chủ</a></li>
                 </ul>
@@ -24,18 +25,28 @@
                     <div>
                         <label>Username:</label>
                         <div class="controls">
-                            {{ text_field('username', 'class': "form-control", 'placeholder': "Username") }}
+                            <?= $this->tag->textField(['username', 'class' => 'form-control', 'placeholder' => 'Username']) ?>
                         </div>
                     </div>
                     <div>
                         <label>Password:</label>
                         <div class="controls">
-                            {{ password_field('password', 'class': "form-control", 'placeholder': "Password" ) }}
+                            <?= $this->tag->passwordField(['password', 'class' => 'form-control', 'placeholder' => 'Password']) ?>
                         </div>
                     </div>
+                    <div>
+                        <?php if ($loginFalse) { ?>
+                            <i>Username or password is incorrect !!</i><br>
+                            <a href="#"><i>Click here if you forgot password</i></a><br>
+                            <a href="../session/signup">
+                                <i>Create new account</i>
+                            </a>
+                        <?php } ?>
+                    </div>
                     <div class="checkbox"><input type="checkbox"> Ghi nhớ đăng nhập</div>
+
                     <div class="form-group">
-                        <a href="">{{ submit_button('login', 'class': 'btn btn-primary btn-large') }}</a>
+                        <a href=""><?= $this->tag->submitButton(['login', 'class' => 'btn btn-primary btn-large']) ?></a>
                     </div>
                 </div>
             </form>
