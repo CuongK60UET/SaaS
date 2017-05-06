@@ -39,12 +39,6 @@
                     </div>
                 </div>
                 <div class="form-group">
-                    <label for="inputEmail" class="control-label col-xs-3">Email *</label>
-                    <div class="col-xs-8">
-                        <input name="email" type="text" class="form-control" id="inputEmail" placeholder="Email">
-                    </div>
-                </div>
-                <div class="form-group">
                     <label class="control-label col-xs-3">Date of Birth <span class="text-danger">*</span></label>
                     <div class="col-xs-8">
                         <div class="form-inline">
@@ -81,7 +75,7 @@
                 <div class="form-group">
                     <label for="inputEmail" class="control-label col-xs-3">Username *</label>
                     <div class="col-xs-8">
-                        <input type="text" name="username" class="form-control" id="inputEmail" placeholder="Username ">
+                        <input type="text" name="username" class="form-control" id="inputEmail" placeholder="Your Username or Email">
                     </div>
                 </div>
                 <div class="form-group">
@@ -97,18 +91,11 @@
                     </div>
                 </div>
                 <div class="form-group">
-                    <div style="text-align: center" class="confirm">
-                        <?php if ($createFail) { ?>
-                            username is existed !!
-                        <?php } elseif ($notmatch) { ?>
-                            Password and ConfirmPassword is not match !!
-                        <?php } ?>
-
-                    </div>
+                    <div style="text-align: center" class="confirm"></div>
                 </div>
                 <div class="form-group">
                     <div class="col-xs-offset-5 col-xs-10">
-                        <input type="submit" name="submit" class="btn btn-primary submit" value="Sign Up"></input>
+                        <input type="submit" name="submit" class="btn btn-primary submit" value="Create"></input>
                     </div>
                 </div>
             </form>

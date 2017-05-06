@@ -8,7 +8,7 @@
             <div class="col-md-9">
                 <ul class="nav nav-pills">
                     <li role="presentation" class="active"><a href="../session/index">Đăng nhập</a></li>
-                    
+                    {#<li role="presentation"><a href="">Đăng kí tài khoản</a></li>#}
                     <li role="presentation"><a href="../index">Trang chủ</a></li>
                 </ul>
             </div>
@@ -98,12 +98,11 @@
                 </div>
                 <div class="form-group">
                     <div style="text-align: center" class="confirm">
-                        <?php if ($createFail) { ?>
+                        {% if createFail %}
                             username is existed !!
-                        <?php } elseif ($notmatch) { ?>
+                        {% elseif notmatch %}
                             Password and ConfirmPassword is not match !!
-                        <?php } ?>
-
+                        {% endif %}
                     </div>
                 </div>
                 <div class="form-group">

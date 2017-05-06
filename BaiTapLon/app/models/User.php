@@ -1,5 +1,8 @@
 <?php
 
+use Phalcon\Validation;
+use Phalcon\Mvc\Model\Validator\Email as EmailValidator;
+
 class User extends \Phalcon\Mvc\Model
 {
 
@@ -29,14 +32,14 @@ class User extends \Phalcon\Mvc\Model
     /**
      *
      * @var string
-     * @Column(type="string", length=20, nullable=false)
+     * @Column(type="string", length=20, nullable=true)
      */
     public $sodienthoai;
 
     /**
      *
      * @var string
-     * @Column(type="string", length=200, nullable=false)
+     * @Column(type="string", length=200, nullable=true)
      */
     public $DiaChi;
 
@@ -50,7 +53,7 @@ class User extends \Phalcon\Mvc\Model
     /**
      *
      * @var string
-     * @Column(type="string", length=20, nullable=false)
+     * @Column(type="string", length=20, nullable=true)
      */
     public $ngaysinh;
 
@@ -64,9 +67,45 @@ class User extends \Phalcon\Mvc\Model
     /**
      *
      * @var string
-     * @Column(type="string", length=200, nullable=false)
+     * @Column(type="string", length=1000, nullable=true)
      */
     public $avatar;
+
+    /**
+     *
+     * @var string
+     * @Column(type="string", length=200, nullable=true)
+     */
+    public $email;
+
+    /**
+     *
+     * @var string
+     * @Column(type="string", length=50, nullable=true)
+     */
+    public $idfb;
+
+    /**
+     * Validations and business logic
+     *
+     * @return boolean
+     */
+//    public function validation()
+//    {
+//        $validator = new Validation();
+//
+//        $validator->add(
+//            'email',
+//            new EmailValidator(
+//                [
+//                    'model'   => $this,
+//                    'message' => 'Please enter a correct email address',
+//                ]
+//            )
+//        );
+//
+//        return $this->validate($validator);
+//    }
 
     /**
      * Initialize method for model.
@@ -74,7 +113,8 @@ class User extends \Phalcon\Mvc\Model
     public function initialize()
     {
 //        $this->setSchema("quanaonam.com");
-        $this->hasMany('userID', 'Giohang', 'userID', ['alias' => 'Giohang']);
+        $this->hasMany('userID', 'Cart', 'userID', ['alias' => 'Cart']);
+        $this->hasMany('userID', 'Orders', 'user_id', ['alias' => 'Orders']);
     }
 
     /**

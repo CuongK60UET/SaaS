@@ -12,6 +12,7 @@
     <link rel="stylesheet" href="/css/login.css">
     <link rel="stylesheet" href="../css/slide1.css">
     <link rel="stylesheet" href="../css/style_index.css">
+    {#<script src="../js/loginFB.js"></script>#}
 </head>
 <body>
 

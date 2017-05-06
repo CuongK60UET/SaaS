@@ -81,3 +81,16 @@ $('.saveCart').click(function () {
     }
 
 });
+$(".submit").click(function () {
+    $.ajax({
+        type: 'POST',
+        url: "../session/signup",
+        data: {},
+        success : function (data){
+            if (data.status == '1'){
+                $(".confirm").innerHTML("ádkjhashjk");
+            }
+        }
+
+    });
+})

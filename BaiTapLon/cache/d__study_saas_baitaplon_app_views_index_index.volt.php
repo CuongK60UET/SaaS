@@ -11,7 +11,7 @@
                     <?php if ($run1) { ?>
                         <li role="presentation" class="user dropdown">
                             <a id="user" class="dropdown-toggle" data-toggle="dropdown">
-                                <img src="../img/contacts_icon21.png" width="22">
+                                <img src="<?= $image ?>" width="22">
                                 <p><?= $users ?></p>
                             </a>
                             <ul class="dropdown-menu">
@@ -24,8 +24,13 @@
                         </li>
 
                     <?php } else { ?>
-                        <li role="presentation" class="active"><a href="/session/login">Đăng nhập</a></li>
-
+                        <li role="presentation" class="active"><a href="/session/index">Đăng nhập</a></li>
+                        
+                                
+                                    
+                                
+                            
+                        
                     <?php } ?>
                     <li role="presentation"><a href="/index/cart">Đi tới giỏ hàng</a></li>
                     <li role="presentation"><a href="../session/signup">Đăng kí</a></li>

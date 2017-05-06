@@ -19,7 +19,7 @@
 <div id="main">
     <div class="container login-container">
         <div class="form-container" style="width: 400px">
-            <form action="login" method="post">
+            <form action="login" method="post" >
                 <div>
                     <div id="form-title">Đăng nhập</div>
                     <div>
@@ -35,19 +35,25 @@
                         </div>
                     </div>
                     <div>
-                        {% if loginFalse %}
+                        {% if loginFail %}
                             <i>Username or password is incorrect !!</i><br>
                             <a href="#"><i>Click here if you forgot password</i></a><br>
                             <a href="../session/signup">
-                                <i>Create new account</i>
+                            <i>Create new account</i>
                             </a>
                         {% endif %}
+
                     </div>
                     <div class="checkbox"><input type="checkbox"> Ghi nhớ đăng nhập</div>
-
-                    <div class="form-group">
-                        <a href="">{{ submit_button('login', 'class': 'btn btn-primary btn-large') }}</a>
+                    <div class="row">
+                        <div class="form-group col-xs-4" style="    padding-top: 21px; padding-left: 88px;">
+                            <a href=""><input type="submit" name = "submit" value="Login" class="btn btn-primary"></a>
+                        </div>
+                        <div class="col-xs-6">
+                            <a href="https://www.facebook.com/dialog/oauth?client_id=413764872356508&redirect_uri=http://localhost:1334/account/loginfb&scope=public_profile"><img src="../img/facebook-sign-in.png" style="width: 200px"/></a>
+                        </div>
                     </div>
+
                 </div>
             </form>
         </div>

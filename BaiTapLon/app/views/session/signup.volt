@@ -19,7 +19,7 @@
     <div class="container login-container">
         <h2 style="text-align: center">SIGN UP</h2>
         <div class="form-container" >
-            <form action="../session/signup" method="post" class="form-horizontal">
+            <form action="signup" method="post" class="form-horizontal">
                 <div class="form-group">
                     <label for="inputEmail" class="control-label col-xs-3">Full Name *</label>
                     <div class="col-xs-8">
@@ -36,6 +36,12 @@
                     <label for="inputEmail" class="control-label col-xs-3">Address *</label>
                     <div class="col-xs-8">
                         <input name="address" type="text" class="form-control" id="inputEmail" placeholder="Your address">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="inputEmail" class="control-label col-xs-3">Email *</label>
+                    <div class="col-xs-8">
+                        <input name="email" type="text" class="form-control" id="inputEmail" placeholder="Email">
                     </div>
                 </div>
                 <div class="form-group">
@@ -75,7 +81,7 @@
                 <div class="form-group">
                     <label for="inputEmail" class="control-label col-xs-3">Username *</label>
                     <div class="col-xs-8">
-                        <input type="text" name="username" class="form-control" id="inputEmail" placeholder="Your Username or Email">
+                        <input type="text" name="username" class="form-control" id="inputEmail" placeholder="Username ">
                     </div>
                 </div>
                 <div class="form-group">
@@ -91,8 +97,18 @@
                     </div>
                 </div>
                 <div class="form-group">
+                    <div style="text-align: center" class="confirm">
+                        {% if createFail %}
+                            username is existed !!
+                        {% elseif notmatch %}
+                            Password and ConfirmPassword is not match !!
+                        {% endif %}
+
+                    </div>
+                </div>
+                <div class="form-group">
                     <div class="col-xs-offset-5 col-xs-10">
-                        <button type="submit" name="submit" class="btn btn-primary">Create</button>
+                        <input type="submit" name="submit" class="btn btn-primary submit" value="Sign Up"></input>
                     </div>
                 </div>
             </form>

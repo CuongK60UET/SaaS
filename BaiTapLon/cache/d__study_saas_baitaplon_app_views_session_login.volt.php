@@ -19,7 +19,7 @@
 <div id="main">
     <div class="container login-container">
         <div class="form-container" style="width: 400px">
-            <form action="login" method="post">
+            <form action="login" method="post" >
                 <div>
                     <div id="form-title">Đăng nhập</div>
                     <div>
@@ -35,18 +35,17 @@
                         </div>
                     </div>
                     <div>
-                        <?php if ($loginFalse) { ?>
-                            <i>Username or password is incorrect !!</i><br>
-                            <a href="#"><i>Click here if you forgot password</i></a><br>
-                            <a href="../session/signup">
-                                <i>Create new account</i>
-                            </a>
-                        <?php } ?>
+                        <?= $this->flash->output() ?>
+                            
+                            
+                            
+                                
+                            
                     </div>
                     <div class="checkbox"><input type="checkbox"> Ghi nhớ đăng nhập</div>
 
                     <div class="form-group">
-                        <a href=""><?= $this->tag->submitButton(['login', 'class' => 'btn btn-primary btn-large']) ?></a>
+                        <a href=""><input type="submit" name = "submit" value="Login" class="btn btn-primary"></a>
                     </div>
                 </div>
             </form>

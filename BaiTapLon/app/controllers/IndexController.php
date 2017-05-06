@@ -51,6 +51,7 @@ class IndexController extends ControllerBase
         );// paging
         if ($this->getAuth()) {
             $this->view->users = $this->getAuth()['HovaTen'];
+            $this->view->image = $this->getAuth()['avatar'];
             $this->view->run1 = true;
             $this->view->run2 = false;
         }
@@ -61,6 +62,7 @@ class IndexController extends ControllerBase
     {
         if ($this->getAuth()) {
             $this->view->users = $this->getAuth()['HovaTen'];
+            $this->view->image = $this->getAuth()['avatar'];
             $cart = array_merge($this->session->get('cart'), $this->session->get('carts'));
             $this->view->run2 = false;
             if (count($cart)) {
@@ -197,7 +199,7 @@ class IndexController extends ControllerBase
             'bind' => array(
                 'MaLoai' => $typeID,
             )
-        ))->toArray();
+        ))->toArray();$this->view->image = $this->getAuth()['avatar'];
 //        print_r($products);die;
         $this->view->data = $products;
 
@@ -205,6 +207,7 @@ class IndexController extends ControllerBase
 
         if ($this->getAuth()) {
             $this->view->users = $this->getAuth()['HovaTen'];
+
             $this->view->run1 = true;
             $this->view->run2 = false;
         }

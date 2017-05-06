@@ -8,11 +8,11 @@
             </div>
             <div class="col-md-9">
                 <ul class="nav nav-pills">
-                    {% if run1 %}
+                    <?php if ($run1) { ?>
                         <li role="presentation" class="user dropdown">
                             <a id="user" class="dropdown-toggle" data-toggle="dropdown">
-                                <img src="{{ image }}" width="22">
-                                <p>{{ users }}</p>
+                                <img src="<?= $image ?>" width="22">
+                                <p><?= $users ?></p>
                             </a>
                             <ul class="dropdown-menu">
                                 <li class=""><a href="#">Thông tin người dùng </a></li>
@@ -21,10 +21,10 @@
                             </ul>
                         </li>
                         <li role="presentation"><a href="/index/cart">Đi tới giỏ hàng</a></li>
-                    {% endif %}
-                    {% if run2 %}
+                    <?php } ?>
+                    <?php if ($run2) { ?>
                         <li role="presentation" class="active"><a href="/session/index">Đăng nhập</a></li>
-                    {% endif %}
+                    <?php } ?>
 
                     <li role="presentation"><a href="../session/signup">Đăng kí tài khoản</a></li>
                     <li role="presentation"><a href="/index/index">Trang chủ</a></li>
@@ -42,9 +42,9 @@
                         <h5><b>Danh mục sản phẩm</b></h5>
 
                         <ul class="ds_sanpham">
-                            {% for item in loai %}
-                                <a href="../index/productType?typeID={{ item['MaLoai'] }}" class="productType" typeID="{{ item['MaLoai'] }} "><li  >{{ item['TenLoaisp'] }}</li></a>
-                            {% endfor %}
+                            <?php foreach ($loai as $item) { ?>
+                                <a href="../index/productType?typeID=<?= $item['MaLoai'] ?>" class="productType" typeID="<?= $item['MaLoai'] ?> "><li  ><?= $item['TenLoaisp'] ?></li></a>
+                            <?php } ?>
                         </ul>
                     </div>
                     <div class="slide">
@@ -69,43 +69,43 @@
                 </div>
 
                 <div class="col-md-7 sp_noibat">
-                    <h5 class="spnoibat"><b>Các sản phẩm thuộc danh mục {{ type['TenLoaisp'] }}</b></h5>
+                    <h5 class="spnoibat"><b>Các sản phẩm thuộc danh mục <?= $type['TenLoaisp'] ?></b></h5>
                     <ul class="main_sanpham">
-                        {% for item in data %}
+                        <?php foreach ($data as $item) { ?>
                             <li id='sanpham' class='row'>
                                 <div class="col-sm-5">
-                                    <img src="../img/{{ item['image'] }}" width="200px">
+                                    <img src="../img/<?= $item['image'] ?>" width="200px">
                                 </div>
                                 <div class='col-sm-7 text_info'>
-                                    <a href='#'><b>Tên sản phẩm: {{ item['TenQuanao'] }}</b></a>
-                                    <p><b>Giá: {{ item['Gia'] }}</b></p>
-                                    <p><b>Màu sắc:</b>{{ item['color'] }} </p>
-                                    <p><b>Size: </b>{{ item['sizes'] }}</p>
-                                    <p><b>Chú thích: </b><br>{{ item['chuthich'] }}</p>
+                                    <a href='#'><b>Tên sản phẩm: <?= $item['TenQuanao'] ?></b></a>
+                                    <p><b>Giá: <?= $item['Gia'] ?></b></p>
+                                    <p><b>Màu sắc:</b><?= $item['color'] ?> </p>
+                                    <p><b>Size: </b><?= $item['sizes'] ?></p>
+                                    <p><b>Chú thích: </b><br><?= $item['chuthich'] ?></p>
                                     <b>Số lượng: </b>
                                     <input type = "number" id = "soluong"  style="width: 50px" value="1">Chiếc <br>
                                     <div class='button' >
-                                        <button class='btn addcart ' type='button' data_sp="{{ item['MaQuanAo'] }}" data_tensp ="{{ item['TenQuanao'] }}" data_giasp="{{ item['Gia'] }}"
-                                                data_colorsp="{{ item['color'] }}" data_sizesp="{{ item['sizes'] }}" data_notesp="{{ item['chuthich'] }}" name ="add" data_anhsp="{{ item['image'] }}">Thêm vào giỏ hàng</button>
+                                        <button class='btn addcart ' type='button' data_sp="<?= $item['MaQuanAo'] ?>" data_tensp ="<?= $item['TenQuanao'] ?>" data_giasp="<?= $item['Gia'] ?>"
+                                                data_colorsp="<?= $item['color'] ?>" data_sizesp="<?= $item['sizes'] ?>" data_notesp="<?= $item['chuthich'] ?>" name ="add" data_anhsp="<?= $item['image'] ?>">Thêm vào giỏ hàng</button>
                                     </div>
                                 </div>
                             </li>
-                        {% endfor %}
+                        <?php } ?>
                     </ul>
                     <div class="text-center">
-                        <ul class="pagination pagination-large" max_page = "{{ all_page }}">
+                        <ul class="pagination pagination-large" max_page = "<?= $all_page ?>">
                             <li class="prev_page">
-                                <a href="../?page={{ cur_page-1 }}" >
+                                <a href="../?page=<?= $cur_page - 1 ?>" >
                                     <span>prev</span>
                                 </a>
                             </li>
-                            {% for item in pages %}
-                                <li data_page = "{{ cur_page }}" class="page">
-                                    <a href="../?page={{ item }}" >{{ item }}</a>
+                            <?php foreach ($pages as $item) { ?>
+                                <li data_page = "<?= $cur_page ?>" class="page">
+                                    <a href="../?page=<?= $item ?>" ><?= $item ?></a>
                                 </li>
-                            {% endfor %}
+                            <?php } ?>
                             <li class="next_page">
-                                <a href="../?page={{ cur_page+1 }} " ><span>next</span></a>
+                                <a href="../?page=<?= $cur_page + 1 ?> " ><span>next</span></a>
                             </li>
                         </ul>
 

@@ -103,7 +103,6 @@
                         <?php } elseif ($notmatch) { ?>
                             Password and ConfirmPassword is not match !!
                         <?php } ?>
-
                     </div>
                 </div>
                 <div class="form-group">

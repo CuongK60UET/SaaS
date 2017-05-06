@@ -63,6 +63,7 @@ class OrdersController extends ControllerBase
     public function ordersAction()
     {
         $this->view->users = $this->getAuth()['HovaTen'];
+        $this->view->image = $this->getAuth()['avatar'];
         $user = $this->getAuth();
         $order = Orders::find(array(
                 "user_id = :id:",
@@ -84,6 +85,7 @@ class OrdersController extends ControllerBase
 
     public function order_detailsAction(){
         $this->view->users = $this->getAuth();
+        $this->view->image = $this->getAuth()['avatar'];
         $order_id = $_GET['id'];
         $order = Orders::findFirst(array(
             "id = :order_id:",

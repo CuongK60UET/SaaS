@@ -8,7 +8,7 @@
                 <ul class="nav nav-pills " >
                     <li role="presentation" class="user dropdown">
                         <a id="user" class="dropdown-toggle" data-toggle="dropdown">
-                            <img src="../img/contacts_icon21.png" width="22">
+                            <img src="<?= $image ?>" width="22">
                             <p><?= $users ?></p>
                         </a>
                         <ul class="dropdown-menu">
