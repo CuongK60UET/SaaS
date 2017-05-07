@@ -25,13 +25,13 @@
                     <div>
                         <label>Username:</label>
                         <div class="controls">
-                            <?= $this->tag->textField(['username', 'class' => 'form-control', 'placeholder' => 'Username']) ?>
+                            <input type="text" class="form-control" name="username" placeholder="Username" required >
                         </div>
                     </div>
                     <div>
                         <label>Password:</label>
                         <div class="controls">
-                            <?= $this->tag->passwordField(['password', 'class' => 'form-control', 'placeholder' => 'Password']) ?>
+                            <input type="password" class="form-control" name="password" placeholder="Password" required >
                         </div>
                     </div>
                     <div>

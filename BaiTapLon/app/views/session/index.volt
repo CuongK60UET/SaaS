@@ -25,13 +25,13 @@
                     <div>
                         <label>Username:</label>
                         <div class="controls">
-                            {{ text_field('username', 'class': "form-control", 'placeholder': "Username") }}
+                            <input type="text" class="form-control" name="username" placeholder="Username" required >
                         </div>
                     </div>
                     <div>
                         <label>Password:</label>
                         <div class="controls">
-                            {{ password_field('password', 'class': "form-control", 'placeholder': "Password" ) }}
+                            <input type="password" class="form-control" name="password" placeholder="Password" required >
                         </div>
                     </div>
                     <div>

@@ -20,7 +20,8 @@ class AccountController extends ControllerBase{
         }
     }
     public function signupAction(){
-        if($this->request->getPost('submit')){
+        if($this->request->getPost()){
+//            print_r(1);die();
             $username = $this->request->getPost('username');
             $login = User::findFirst(array(
                 "username = :username:",
@@ -33,10 +34,34 @@ class AccountController extends ControllerBase{
                 $pass = $this->request->getPost('pass');
                 $confirmpass = $this->request->getPost('confirmPass');
                 if ($pass == $confirmpass){
-                    return $this->dispatcher->forward(array(
-                        'controller' => 'account',
-                        'action' => 'index'
-                    ));
+                    $user = new User();
+                    $user->username = $username;
+                    $user->HovaTen = $this->request->getPost('fullName');
+                    $user->sodienthoai = $this->request->getPost('phone');
+                    $user->ngaysinh = $this->request->getPost('ngaysinh');
+                    $user->DiaChi = $this->request->getPost('address');
+                    $user->email = $this->request->getPost('email');
+                    $user->gioitinh = $this->request->getPost('gender');
+                    $user->password = $pass;
+                    $user->avatar = $this->session->get('userinfofb')['image'];
+                    $user->idfb = $this->session->get('userinfofb')['id'];
+                    print_r($user);die;
+                    try{
+                        if(!$user->save()){
+//                            print_r(1);die;
+                            var_dump($user->getMessages());die;
+
+                        }
+                        else{
+                            $this->setAuth($user->toArray());
+                            return $this->dispatcher->forward(array(
+                                'controller' => 'session',
+                                'action' => 'start'
+                            ));
+                        }
+                    } catch (Exception $e){
+                        var_dump($e->getMessage());die;
+                    }
                 }
                 $this->check2 = 1;
                 return $this->dispatcher->forward(array(

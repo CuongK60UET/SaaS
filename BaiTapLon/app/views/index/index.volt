@@ -32,8 +32,8 @@
                             {#</a>#}
                         {#</li>#}
                     {% endif %}
-                    <li role="presentation"><a href="/index/cart">Đi tới giỏ hàng</a></li>
-                    <li role="presentation"><a href="../session/signup">Đăng kí</a></li>
+                    <li role="presentation"><a href="/index/cart">Giỏ hàng</a></li>
+                    <li role="presentation"><a href="../account/signup">Đăng kí</a></li>
                     <li role="presentation"><a href="../index/index">Trang chủ</a></li>
                 </ul>
             </div>

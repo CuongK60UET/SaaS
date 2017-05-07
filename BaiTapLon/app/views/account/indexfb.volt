@@ -1,3 +1,4 @@
+
 <div id="header">
     <div class="container">
         <div class="row">
@@ -23,55 +24,55 @@
                 <div class="form-group">
                     <label for="inputEmail" class="control-label col-xs-3">Full Name *</label>
                     <div class="col-xs-8">
-                        <input name="fullName" type="text" class="form-control" id="inputEmail" placeholder="Name" value="{{ userinfo['HovaTen'] }}">
+                        <input name="fullName" type="text" class="form-control fullname" id="inputEmail" placeholder="Name" value="{{ userinfo['HovaTen'] }}" >
                     </div>
                 </div>
                 <div class="form-group">
                     <label for="inputPassword" class="control-label col-xs-3">Phone Number *</label>
                     <div class="col-xs-8">
-                        <input name="phone" type="text" class="form-control" id="inputPassword" placeholder="phone number">
+                        <input name="phone" type="text" class="form-control phone" id="inputPassword" placeholder="phone number">
                     </div>
                 </div>
                 <div class="form-group">
                     <label for="inputEmail" class="control-label col-xs-3">Address *</label>
                     <div class="col-xs-8">
-                        <input name="address" type="text" class="form-control" id="inputEmail" placeholder="Your address" value="{{ userinfo['DiaChi'] }}">
+                        <input name="address" type="text" class="form-control address" id="inputEmail" placeholder="Your address" value="{{ userinfo['DiaChi'] }}">
                     </div>
                 </div>
                 <div class="form-group">
                     <label for="inputEmail" class="control-label col-xs-3" >Email *</label>
                     <div class="col-xs-8">
-                        <input name="email" type="text" class="form-control" id="inputEmail" placeholder="Email" value="{{ userinfo['email'] }}">
+                        <input name="email" type="text" class="form-control email" id="inputEmail" placeholder="Email" value="{{ userinfo['email'] }}">
                     </div>
                 </div>
                 <div class="form-group">
                     <label class="control-label col-xs-3">Date of Birth <span class="text-danger">*</span></label>
                     <div class="col-xs-8">
-                        <input name="ngaysinh" type="text" class="form-control" id="inputEmail" placeholder="Date of birth" value="{{ userinfo['ngaysinh'] }}">
+                        <input name="ngaysinh" type="text" class="form-control date" id="inputEmail" placeholder="Date of birth" value="{{ userinfo['ngaysinh'] }}" >
                     </div>
                 </div>
                 <div class="form-group">
                     <label class="control-label col-xs-3">Gender <span class="text-danger">*</span></label>
                     <div class="col-md-8 col-sm-9">
-                        <input type="text" class="form-control" id="inputEmail" name="gender" value="{{ userinfo['gioitinh'] }}">
+                        <input type="text" class="form-control" id="inputEmail" name="gender" value="{{ userinfo['gioitinh'] }}" >
                     </div>
                 </div>
                 <div class="form-group">
                     <label for="inputEmail" class="control-label col-xs-3">Username *</label>
                     <div class="col-xs-8">
-                        <input type="text" name="username" class="form-control" id="inputEmail" placeholder="Username ">
+                        <input type="text" name="username" class="form-control" id="inputEmail" placeholder="Username " required>
                     </div>
                 </div>
                 <div class="form-group">
                     <label for="inputPassword" class="control-label col-xs-3">Password *</label>
                     <div class="col-xs-8">
-                        <input type="password" name="pass" class="form-control" id="inputPassword" placeholder="Password">
+                        <input type="password" name="pass" class="form-control" id="inputPassword" placeholder="Password" required>
                     </div>
                 </div>
                 <div class="form-group">
                     <label for="inputPassword" class="control-label col-xs-3">Confirm Password *</label>
                     <div class="col-xs-8">
-                        <input type="password" name="confirmPass" class="form-control" id="inputPassword" placeholder="Password">
+                        <input type="password" name="confirmPass" class="form-control" id="inputPassword" placeholder="Password" required>
                     </div>
                 </div>
                 <div class="form-group">
